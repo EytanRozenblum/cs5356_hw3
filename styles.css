@@ -19,6 +19,13 @@ article {
     grid-template-columns: 1fr;
 }
 
+/* Sections container layout */
+.sections-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr; 
+}
+
 /* Single column layout by default */
 figure, .about, .favorites {
     grid-column: 1;
@@ -57,6 +64,20 @@ img {
     figure {
         padding: 0 1rem;
     }
+
+    article {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    figure {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .sections-container {
+        grid-column: 2;
+        grid-template-columns: 1fr 1fr;  /* Two columns on larger screens */
+    }
 }
 
 figcaption {
@@ -89,31 +110,6 @@ nav a:hover {
     background-color: #0066cc;
     color: white;
     transform: translateY(-2px);
-}
-
-/* Larger screens */
-@media (min-width: 768px) {
-    article {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-    }
-
-    figure {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .about, .favorites {
-        grid-column: 2;
-    }
-
-    /* Create two columns for the sections */
-    section:nth-of-type(2) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        align-items: start;
-    }
 }
 
 /* Ensure sections align properly */
