@@ -36,13 +36,24 @@ figure {
 
 img {
     max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
+}
+
+/* Add a container width for larger screens */
+@media (min-width: 768px) {
+    figure img {
+        width: auto;
+        max-width: 500px;
+    }
 }
 
 figcaption {
     margin-top: 0.5rem;
     font-style: italic;
+    max-width: 500px;
+    padding: 0 1rem; 
 }
 
 /* Navigation layout */
