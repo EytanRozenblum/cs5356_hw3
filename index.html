@@ -3,22 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
     <title>My Personal Homepage</title>
+    <meta name="title" content="My Personal Homepage">
+    <meta name="description" content="Explore my personal website featuring beautiful views of Montmartre and discover random artworks from The Met Museum collection.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eytanrozenblum.github.io/cs5356-hw3/">
+    <meta property="og:title" content="My Personal Homepage">
+    <meta property="og:description" content="Explore my personal website featuring beautiful views of Montmartre and discover random artworks from The Met Museum collection.">
+    <meta property="og:image" content="https://eytanrozenblum.github.io/cs5356-hw3/files/montmartre.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://eytanrozenblum.github.io/cs5356-hw3/">
+    <meta property="twitter:title" content="My Personal Homepage">
+    <meta property="twitter:description" content="Explore my personal website featuring beautiful views of Montmartre and discover random artworks from The Met Museum collection.">
+    <meta property="twitter:image" content="https://eytanrozenblum.github.io/cs5356-hw3/files/montmartre.jpg">
+
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- GoatCounter analytics -->
+    <script data-goatcounter="https://cs5356er.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
-    <h1>Welcome to My Homepage</h1>
+    <header>
+        <h1>Welcome to My Homepage</h1>
+    </header>
     
-    <img src="files/montmartre.jpg" alt="View of the Sacré-Cœur in Montmartre, Paris" style="max-width: 500px;">
-    
-    <h2>About Me</h2>
-    <p>This is a basic test page for CS5356 HW3.</p>
-    
-    <p>I am a student at Cornell University, pursuing a degree in Operations Research.</p>
+    <main>
+        <article>
+            <figure>
+                <img src="files/montmartre.jpg" alt="View of the Sacré-Cœur in Montmartre, Paris" style="max-width: 500px;">
+                <figcaption>The beautiful Sacré-Cœur basilica in Montmartre, Paris</figcaption>
+            </figure>
+            
+            <section>
+                <h2>About Me</h2>
+                <p>This is a basic test page for CS5356 HW3.</p>
+                
+                <p>I am a student at Cornell University, pursuing a degree in Operations Research.</p>
+                
+                <details>
+                    <summary>Fun Facts About Me</summary>
+                    <ul>
+                        <li>I've visited the Sacré-Cœur basilica</li>
+                        <li>I love solving puzzles and brain teasers</li>
+                        <li>I can speak three languages</li>
+                    </ul>
+                </details>
+            </section>
 
-    <h2>My Favorite Websites</h2>
-    <ul>
-        <li><a href="https://www.google.com">Google</a></li>
-        <li><a href="https://www.youtube.com">YouTube</a></li>
-    
+            <section>
+                <h2>My Favorite Websites</h2>
+                <nav>
+                    <ul>
+                        <li><a href="https://www.google.com">Google</a></li>
+                        <li><a href="https://www.youtube.com">YouTube</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="art-discovery">
+                <h2>Discover Art from The Met</h2>
+                <button id="discover-art">Discover a New Artwork</button>
+                <div id="artwork-container">
+                    <!-- Artwork will be displayed here -->
+                </div>
+            </section>
+        
+            <script src="script.js"></script>
+        </article>
+    </main>
 </body>
 </html>

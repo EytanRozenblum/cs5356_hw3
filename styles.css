@@ -1,0 +1,187 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+}
+
+/* Container layout */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Article grid layout */
+article {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+/* Image responsiveness */
+figure {
+    margin: 0;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Navigation layout */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav a {
+    color: #0066cc;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #0066cc;
+    border-radius: 4px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background-color: #0066cc;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+    article {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    figure {
+        grid-column: 1 / -1;  /* Make figure span full width */
+    }
+}
+
+/* Details element styling */
+details {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+details summary {
+    cursor: pointer;
+    padding: 0.5rem;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+details summary:hover {
+    color: #0066cc;
+}
+
+details[open] {
+    background-color: #f9f9f9;
+}
+
+/* Add transition to all interactive elements */
+a, button, summary {
+    transition-property: color, background-color, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+/* Art discovery section styling */
+.art-discovery {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+#discover-art {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+#discover-art:hover {
+    background-color: #0052a3;
+    transform: translateY(-2px);
+}
+
+#artwork-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#artwork-container figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#artwork-container img {
+    max-height: 500px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+#artwork-container figcaption {
+    text-align: left;
+    width: 100%;
+}
+
+#artwork-container h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+#artwork-container a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+#artwork-container a:hover {
+    text-decoration: underline;
+}
+
+.artwork-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: none; /* Hide cursor over the image */
+}
+
+.artwork-image {
+    display: block;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.spotlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    pointer-events: none;
+}
