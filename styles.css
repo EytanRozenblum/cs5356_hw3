@@ -44,21 +44,26 @@ img {
     width: 100%;
     height: auto;
     display: block;
+    min-width: 200px;
 }
 
-/* Add a container width for larger screens */
+/* Larger screens */
 @media (min-width: 768px) {
-    figure img {
+    img {
         width: auto;
-        max-width: 500px;
+        max-width: 100%;
+    }
+
+    figure {
+        padding: 0 1rem;
     }
 }
 
 figcaption {
     margin-top: 0.5rem;
     font-style: italic;
-    max-width: 500px;
-    padding: 0 1rem; 
+    padding: 0 1rem;
+    max-width: 100%;
 }
 
 /* Navigation layout */
