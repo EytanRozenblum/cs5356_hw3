@@ -92,6 +92,23 @@ nav a:hover {
     }
 }
 
+/* Even larger screens - side by side layout */
+@media (min-width: 1024px) {
+    article {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    figure {
+        grid-column: 1;  /* Place figure in first column */
+        grid-row: 1;     /* Place figure in first row */
+    }
+
+    section {
+        margin-top: 0;   /* Remove top margin for sections */
+    }
+}
+
 /* Details element styling */
 details {
     margin: 1rem 0;
