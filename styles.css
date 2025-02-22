@@ -19,6 +19,11 @@ article {
     grid-template-columns: 1fr;
 }
 
+/* Single column layout by default */
+figure, .about, .favorites {
+    grid-column: 1;
+}
+
 /* Image responsiveness */
 header {
     text-align: center;
@@ -84,29 +89,29 @@ nav a:hover {
 /* Larger screens */
 @media (min-width: 768px) {
     article {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
     }
 
     figure {
-        grid-column: 1 / -1;  /* Make figure span full width */
+        grid-column: 1;
+        grid-row: 1 / 3;
+    }
+
+    .about {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .favorites {
+        grid-column: 2;
+        grid-row: 2;
     }
 }
 
-/* Even larger screens - side by side layout */
-@media (min-width: 1024px) {
-    article {
-        grid-template-columns: 1fr 1fr;
-        align-items: start;
-    }
-
-    figure {
-        grid-column: 1;  /* Place figure in first column */
-        grid-row: 1;     /* Place figure in first row */
-    }
-
-    section {
-        margin-top: 0;   /* Remove top margin for sections */
-    }
+/* Ensure sections align properly */
+section {
+    align-self: start;
 }
 
 /* Details element styling */
@@ -204,7 +209,7 @@ a, button, summary {
 .artwork-wrapper {
     position: relative;
     display: inline-block;
-    cursor: none; /* Hide cursor over the image */
+    cursor: none;
 }
 
 .artwork-image {
